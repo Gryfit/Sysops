@@ -1,0 +1,102 @@
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.079332 s
+user time: 0.075776 s
+system time: 0.003553 s
+dynamic.h Find: 
+real time: 0.018171 s
+user time: 0.018167 s
+system time: 0.000001 s
+dynamic.h DelAdd: 
+real time: 0.006979 s
+user time: 0.006976 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000705 s
+user time: 0.000693 s
+system time: 0.000009 s
+static.h Create: 
+real time: 0.080505 s
+user time: 0.070515 s
+system time: 0.009985 s
+static.h Find: 
+real time: 0.026862 s
+user time: 0.022812 s
+system time: 0.004048 s
+static.h DelAdd: 
+real time: 0.009466 s
+user time: 0.009385 s
+system time: 0.000077 s
+static.h DelAddAlternating: 
+real time: 0.000872 s
+user time: 0.000868 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.077979 s
+user time: 0.077976 s
+system time: 0.000000 s
+dynamic.h Find: 
+real time: 0.018449 s
+user time: 0.018444 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.007027 s
+user time: 0.007024 s
+system time: 0.000001 s
+dynamic.h DelAddAlternating: 
+real time: 0.000724 s
+user time: 0.000721 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.080276 s
+user time: 0.067762 s
+system time: 0.012511 s
+static.h Find: 
+real time: 0.027403 s
+user time: 0.021200 s
+system time: 0.006198 s
+static.h DelAdd: 
+real time: 0.008489 s
+user time: 0.008485 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.000846 s
+user time: 0.000843 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.076013 s
+user time: 0.075001 s
+system time: 0.001007 s
+dynamic.h Find: 
+real time: 0.018264 s
+user time: 0.018260 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.006820 s
+user time: 0.006817 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000705 s
+user time: 0.000702 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.080929 s
+user time: 0.070870 s
+system time: 0.010053 s
+static.h Find: 
+real time: 0.025975 s
+user time: 0.016818 s
+system time: 0.009153 s
+static.h DelAdd: 
+real time: 0.008563 s
+user time: 0.008558 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.000961 s
+user time: 0.000957 s
+system time: 0.000000 s

@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 1000
+#define SIZE 100000
 char T[SIZE][SIZE];
 void newTableStatic (int N, size_t blockSize){
     srand (time(NULL));
@@ -17,18 +17,13 @@ void newTableStatic (int N, size_t blockSize){
 
 //delete table
 void freeTableStatic(int N){
-    for(int i=0;i<N;i++){
-        free(T[i]);
-    }
-    free(T);
+    //Legacy
 }
 //delete block
 void delBlockStatic(int i, size_t blockSize){
-    char * tmp = T[i];
     for(int j =0; j<blockSize/ sizeof(char);j++){
-        T[i][j]= -1;
+        T[i][j]= (char) 0;
     }
-    free(tmp);
 }
 //add block
 void addBlockStatic(int i, size_t blockSize){
@@ -38,25 +33,24 @@ void addBlockStatic(int i, size_t blockSize){
 }
 //find closest
 int findStatic(int i, int N, size_t blockSize){
-
     int s =0;
     for(int j=0;j<blockSize/ sizeof(char);j++){
         s+=(int) T[i][j];
     }
-    int min =blockSize/ sizeof(char);
-    char* minEl = NULL;
+    int diff = (int)(blockSize/ sizeof(char))*120;
+    int min_index=i;
     for(int j=0;j<N;j++){
         if(j!=i) {
             int curr = 0;
             for (int k = 0; k < blockSize/ sizeof(char); k++) {
-                curr += T[j][k];
+                curr += (int) T[j][k];
             }
-            if(curr<min){
-                minEl=T[j];
-                min = curr;
+            if(abs(s-curr)<abs(s-diff)){
+                diff = abs(s-diff);
+                min_index = j;
             }
         }
     }
-    return min;
+    return min_index;
 }
 

@@ -14,6 +14,6 @@ void delBlockCalloc(char** T, int i);
 //add block
 void addBlockCalloc(char** T, int i, size_t blockSize);
 //find closest
-char* findCalloc(char **T, int i, int N, size_t blockSize);
+int findCalloc(char **T, int i, int N, size_t blockSize);
 
 #endif //LIST_DYNAMIC_H
