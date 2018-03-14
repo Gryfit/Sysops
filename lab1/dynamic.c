@@ -6,11 +6,11 @@
 
 char** newTableCalloc (int N, size_t blockSize){
     srand (time(NULL));
-    char ** T = calloc(N, sizeof(char*));
+    char ** T = (char**)calloc(N, sizeof(char*));
     for(int i=0;i<N;i++){
-        T[i] = calloc(blockSize/ sizeof(char), sizeof(char));
+        T[i] = (char*)calloc(blockSize/ sizeof(char), sizeof(char));
         for(int j =0; j<blockSize/ sizeof(char);j++){
-            T[i][j]= (char)(rand()%128);
+            T[i][j]= (char)(rand()%94 +33);
         }
     }
     return T;
@@ -34,7 +34,7 @@ void addBlockCalloc(char** T, int i, size_t blockSize){
     char* Block = calloc(blockSize / sizeof(char), sizeof(char));
     T[i] = Block;
     for(int j =0; j<blockSize/ sizeof(char);j++){
-        T[i][j]= (char)(rand()%128);
+        T[i][j]= (char)(rand()%94 +33);
     }
 }
 //find closest
@@ -59,4 +59,5 @@ int findCalloc(char **T, int i, int N, size_t blockSize){
     }
     return min_index;
 }
+
 

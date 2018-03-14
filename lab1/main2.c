@@ -5,12 +5,11 @@
 //static loading of library
 #include <stdio.h>
 #include <stdlib.h>
-#include "../zadanie1/dynamic.h"
+#include "dynamic.h"
 #include <time.h>
 #include <memory.h>
-#include "../zadanie1/static.h"
+#include "static.h"
 #include <sys/resource.h>
-
 int main(int argc, char* argv[]){
 
     if(argc ==1){
@@ -149,6 +148,7 @@ int main(int argc, char* argv[]){
             printf("static.h DelAddAlternating: \n");
         }
     }
+
 
     double real = (double)(end_real-start_real)/CLOCKS_PER_SEC;
     double user = (usage_end.ru_utime.tv_sec-usage_start.ru_utime.tv_sec)+(double)(usage_end.ru_utime.tv_usec-usage_start.ru_utime.tv_usec)/1000000;

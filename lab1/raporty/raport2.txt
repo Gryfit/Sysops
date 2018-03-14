@@ -1,0 +1,33 @@
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.108984 s
+system time: 0.015998 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.150000 s
+user time: 0.116982 s
+system time: 0.027996 s
+dynamic.h DelAddAlternating: 
+real time: 0.120000 s
+user time: 0.119981 s
+system time: 0.000000 s
+Dynamic loading
+static.h Create: 
+real time: 0.120000 s
+user time: 0.109983 s
+system time: 0.019997 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.005999 s
+system time: 0.002000 s
+static.h DelAdd: 
+real time: 0.130000 s
+user time: 0.125981 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.120000 s
+user time: 0.119982 s
+system time: 0.000000 s

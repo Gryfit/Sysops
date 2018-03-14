@@ -1,0 +1,519 @@
+ 
+ Optymalizacja O0
+ 
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.160000 s
+user time: 0.152976 s
+system time: 0.010999 s
+dynamic.h Find: 
+real time: 0.040000 s
+user time: 0.038994 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.140000 s
+user time: 0.141979 s
+system time: 0.005999 s
+static.h Find: 
+real time: 0.030000 s
+user time: 0.033994 s
+system time: 0.001000 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.017997 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.015998 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.130000 s
+user time: 0.139978 s
+system time: 0.007999 s
+dynamic.h Find: 
+real time: 0.040000 s
+user time: 0.037994 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.020000 s
+user time: 0.013998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.130000 s
+user time: 0.138978 s
+system time: 0.005000 s
+static.h Find: 
+real time: 0.030000 s
+user time: 0.035994 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.015997 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.016997 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.140000 s
+user time: 0.139979 s
+system time: 0.004000 s
+dynamic.h Find: 
+real time: 0.040000 s
+user time: 0.037994 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.020000 s
+user time: 0.013998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.130000 s
+user time: 0.138978 s
+system time: 0.007999 s
+static.h Find: 
+real time: 0.030000 s
+user time: 0.034994 s
+system time: 0.001000 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.015997 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.016997 s
+system time: 0.000000 s
+ Optymalizacja O1
+ 
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.120000 s
+user time: 0.109984 s
+system time: 0.012998 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.015997 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011999 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001999 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.118981 s
+system time: 0.005999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.006999 s
+system time: 0.000999 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.011998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.112982 s
+system time: 0.008999 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011999 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.109984 s
+system time: 0.009998 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.007998 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.011998 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.116982 s
+system time: 0.004000 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.000999 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.112982 s
+system time: 0.008999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.005999 s
+system time: 0.002000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+ Optymalizacja O2
+ 
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.114982 s
+system time: 0.007999 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.017997 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.104984 s
+system time: 0.011999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.005999 s
+system time: 0.001999 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.017998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.010998 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.110983 s
+system time: 0.008999 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.016998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010999 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.110983 s
+system time: 0.005000 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.008998 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.012998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.115982 s
+system time: 0.006999 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.016997 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.100000 s
+user time: 0.108983 s
+system time: 0.007999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.005999 s
+system time: 0.002000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.018997 s
+system time: 0.000000 s
+ Optymalizacja O3
+ 
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.116982 s
+system time: 0.006998 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.017998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010999 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.103984 s
+system time: 0.010999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.007998 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010999 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.010999 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.110000 s
+user time: 0.105984 s
+system time: 0.012998 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.016998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010999 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.001000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.120000 s
+user time: 0.110983 s
+system time: 0.008999 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.006998 s
+system time: 0.001000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011999 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.120000 s
+user time: 0.111982 s
+system time: 0.011999 s
+dynamic.h Find: 
+real time: 0.010000 s
+user time: 0.017997 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.110000 s
+user time: 0.106983 s
+system time: 0.011998 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.005999 s
+system time: 0.002000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.010998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.011998 s
+system time: 0.000000 s
+Static loading
+ 
+dynamic.h Create: 
+real time: 0.150000 s
+user time: 0.146978 s
+system time: 0.011999 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.016998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.020000 s
+user time: 0.015997 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.140000 s
+user time: 0.130980 s
+system time: 0.014998 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.008998 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.014997 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.013998 s
+system time: 0.000000 s
+Daynamic loading
+ 
+dynamic.h Create: 
+real time: 0.150000 s
+user time: 0.144977 s
+system time: 0.010999 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.010000 s
+user time: 0.015998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.002000 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.140000 s
+user time: 0.137979 s
+system time: 0.012998 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.007998 s
+system time: 0.000000 s
+static.h DelAdd: 
+real time: 0.010000 s
+user time: 0.013998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.010000 s
+user time: 0.014998 s
+system time: 0.000000 s
+Shared loading
+ 
+dynamic.h Create: 
+real time: 0.150000 s
+user time: 0.145977 s
+system time: 0.015998 s
+dynamic.h Find: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+dynamic.h DelAdd: 
+real time: 0.020000 s
+user time: 0.015998 s
+system time: 0.000000 s
+dynamic.h DelAddAlternating: 
+real time: 0.000000 s
+user time: 0.000999 s
+system time: 0.000000 s
+static.h Create: 
+real time: 0.140000 s
+user time: 0.136979 s
+system time: 0.010998 s
+static.h Find: 
+real time: 0.000000 s
+user time: 0.006999 s
+system time: 0.001000 s
+static.h DelAdd: 
+real time: 0.020000 s
+user time: 0.014998 s
+system time: 0.000000 s
+static.h DelAddAlternating: 
+real time: 0.020000 s
+user time: 0.014997 s
+system time: 0.000000 s

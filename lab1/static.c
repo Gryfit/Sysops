@@ -4,13 +4,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 100000
-char T[SIZE][SIZE];
+#define SIZE 1000000
+#define SIZE2 1000
+char T[SIZE][SIZE2];
 void newTableStatic (int N, size_t blockSize){
     srand (time(NULL));
     for(int i=0;i<N;i++){
         for(int j =0; j<blockSize/ sizeof(char);j++){
-            T[i][j]= (char)(rand()%128);
+            T[i][j]= (char)(rand()%94 +33);
         }
     }
 }
@@ -28,7 +29,7 @@ void delBlockStatic(int i, size_t blockSize){
 //add block
 void addBlockStatic(int i, size_t blockSize){
     for(int j =0; j<blockSize/ sizeof(char);j++){
-        T[i][j]= (char)(rand()%128);
+        T[i][j]= (char)(rand()%94 +33);
     }
 }
 //find closest
