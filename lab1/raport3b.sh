@@ -42,8 +42,8 @@ for (( i=0; $i <= 3; i++ )) ; do
 	./zad 10000 1000 2 DelAddAlternating 1000 >> ./raporty/raport3b.txt
 	make clean
 done
-        echo "Optymalizacja Os" >> raport3b.txt
-	echo " " >> raport3b.txt
+        echo "Optymalizacja Os" >>  ./raporty/raport3b.txt
+	echo " " >>  ./raporty/raport3b.txt
 	make all-static optim='s' p=`pwd`
 	echo "Static loading">> ./raporty/raport3b.txt
 	echo " " >> ./raporty/raport3b.txt
@@ -80,3 +80,4 @@ done
 	./zad 10000 1000 2 DelAdd 1000 >> ./raporty/raport3b.txt
 	./zad 10000 1000 2 DelAddAlternating 1000 >> ./raporty/raport3b.txt
 	make clean
+
