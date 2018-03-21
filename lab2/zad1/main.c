@@ -22,7 +22,7 @@ int generate(char* path, int records, int size){
     }
     for(int i=0;i<records;i++){
 	for(int i=0;i<size-1;i++){
-            tab[i]=(char)(rand()%94 +33);
+            tab[i]=(char)(rand()%25 +97);
         }
         tab[size-1]='\n';
         int tmp =fwrite(tab,1,size,file);
@@ -157,7 +157,7 @@ int sort(char *file, int records, int size, char *mode){
 	        return -1;
         }
         for(i=1;i<records;i++){
-            for(j=i;j>0 && condition(handle,0,size,mode,i,j)>=0;j--){
+            for(j=i;j>0 && condition(handle,0,size,mode,j-1,j)>=0;j--){
                 if(swap(handle,0,size,mode,j-1,j)){
                     fclose(handle);
                     printf("swap failed\n");
@@ -173,7 +173,7 @@ int sort(char *file, int records, int size, char *mode){
 	        return -1;
         }
         for(i=1;i<records;i++){
-            for(j=i;j>0 && condition(NULL,handle,size,mode,i,j)>=0;j--){
+            for(j=i;j>0 && condition(NULL,handle,size,mode,j-1,j)>=0;j--){
                 if(swap(NULL,handle,size,mode,j-1,j)){
                     close(handle);
                     printf("swap failed\n");
