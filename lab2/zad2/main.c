@@ -121,33 +121,19 @@ int ls(char* path, char* mode){
 
 
 int main(int arg, char*args[]) {
-    struct rusage usage_start, usage_end;
-    clock_t start_real,end_real;
-    int out=0;
-    
-    start_real = clock();
-    getrusage(RUSAGE_SELF, &usage_start);
-//------------------Czas jest mierzony
-        MDATE.day = atoi(args[3]);
-        MDATE.mon = atoi(args[4]);
-        MDATE.year = atoi(args[5]);
+    if (arg == 1){
+        printf("./main [path] [comparator] [day] [mon] [year] [mode]\n"
+               "comparator: \'<\' \'=\' \'>\'\n"
+               "mode: sys -> use system function, lib -> use nftw\n"
+                );
+        return 0;
+}
+    MDATE.day = atoi(args[3]);
+    MDATE.mon = atoi(args[4]);
+    MDATE.year = atoi(args[5]);
         
-        COMP = args[2];
+    COMP = args[2];
         
-        out = ls(args[1], args[6]);				
-//--------------Koniec mierzenia czasu
-    getrusage(RUSAGE_SELF, &usage_end);
-    end_real = clock();
-    
-//WYPISIWANIE CZASU
-    double real = (double)(end_real-start_real)/CLOCKS_PER_SEC;
-    double user = (usage_end.ru_utime.tv_sec-usage_start.ru_utime.tv_sec)+(double)(usage_end.ru_utime.tv_usec-usage_start.ru_utime.tv_usec)/1000000;
-
-    double sys = (usage_end.ru_stime.tv_sec-usage_start.ru_stime.tv_sec)+(double)(usage_end.ru_stime.tv_usec-usage_start.ru_stime.tv_usec)/1000000;
-    printf("real time: %f s\n"
-                   "user time: %f s\n"
-                   "system time: %f s\n",real,user,sys);
-
-    return out;
+    return ls(args[1], args[6]);
 }
 

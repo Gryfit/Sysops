@@ -7,29 +7,28 @@
 #include <time.h>
 #include <string.h>
 
-
 int generate(char* path, int records, int size){
+    FILE* file;
+    char * tab;    
+    int i, j;
     srand(time(NULL));
-    FILE* file = fopen(path,"wt");
-    if(file==NULL){
-	perror("Fopen failed.\n");
-	return 1;
+    if(!(file= fopen(path,"wt"))){
+	    perror("Fopen failed.\n");
+	    return -1;
     }
-    char * tab = calloc(size,sizeof(char));
-    if(tab==NULL){
-	perror("Calloc failed.\n");
-	return 1;
+    if(!(tab  = calloc(size,sizeof(char)))){
+	    perror("Calloc failed.\n");
+	    return -1;
     }
-    for(int i=0;i<records;i++){
-	for(int i=0;i<size-1;i++){
-            tab[i]=(char)(rand()%25 +97);
+    for(i=0;i<records;i++){
+	    for(j=0;j<size-1;j++){
+            tab[j]=(char)(rand()%25 +97);
         }
         tab[size-1]='\n';
-        int tmp =fwrite(tab,1,size,file);
-        if(tmp != size){
+        if(fwrite(tab,sizeof(char),size,file) != size){
             perror("Write failed.\n");
-	    return 1;
-	}
+	        return -1;
+	    }
     }
     free(tab);
     fclose(file);
@@ -37,25 +36,24 @@ int generate(char* path, int records, int size){
 }
 int copy( char* file1, char* file2, int records, int size, char* mode){
     if(strcmp(mode,"sys")==0){
-        char* c = calloc(size, sizeof(char));
-        if(c==NULL){
-	    perror("Calloc failed.\n");
-	    return 1;
+        char* c;
+        int we, wy, i;
+        if(!(c = calloc(size, sizeof(char)))){
+	        perror("Calloc failed.\n");
+	        return -1;
         }
-        int we=open(file1, O_RDONLY);
-        int wy=open(file2, O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR);
-        if(we==-1){
-	    perror("open on file1 failed.\n");
-	    return 1;
+        if((we = open(file1, O_RDONLY))==-1){
+	        perror("open on file1 failed.\n");
+	        return -1;
         }
-        if(wy==-1){
-	    perror("open on file2 failed.\n");
-	    return 1;
+        if((wy = open(file2, O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR))==-1){
+	        perror("open on file2 failed.\n");
+	        return -1;
         }
-        for(int i=0;i<records;i++){
+        for(i=0;i<records;i++){
             if(read(we,c,size)!=size){
                 perror("read from file1 failed.");
-                return 1;
+                return -1;
             }
             write(wy, c, size);
         }
@@ -66,23 +64,24 @@ int copy( char* file1, char* file2, int records, int size, char* mode){
     if(strcmp(mode,"lib")==0){
         char* c;
         FILE * we, *wy;
+        int i;
         if(!(c = calloc(size, sizeof(char)))){
 	        perror("Calloc failed.\n");
 	        return -1;
         }
-        if(!(we=fopen(file1, "r"))){
+        if(!(we = fopen(file1, "r"))){
 	        perror("open on file1 failed.\n");
             free(c);	        
             return -1;
         }
-        if(!(wy=fopen(file2, "wt"))){
+        if(!(wy = fopen(file2, "wt"))){
 	        perror("open on file2 failed.\n");
             fclose(we);
             free(c);
 	        return -1;
         }
-        for(int i=0;i<records;i++){
-            if(!fread(c,sizeof(char),size, we)){
+        for(i=0;i<records;i++){
+            if(fread(c,sizeof(char),size, we)!=size){
                 perror("read from file1 failed.");
                 fclose(we);
                 fclose(wy);
@@ -147,7 +146,7 @@ int condition(FILE * file, int filesys, int size, char * mode, long i, long j){
         lseek(filesys,j*size,SEEK_SET);
         read(filesys,&b, 1);
     }
-    return ((int)a-(int)b);
+    return (int)(a-b);
 }
 int sort(char *file, int records, int size, char *mode){
     long i,j;
@@ -190,28 +189,38 @@ int main(int arg, char*args[]) {
     struct rusage usage_start, usage_end;
     clock_t start_real,end_real;
     int out=0;
+    if(arg==1){
+        printf("generate:\n"
+            "./main generate [file name] [records] [size]\n"
+            "copy:\n"
+            "./main copy [from file] [to file] [records] [size] [mode]\n"
+            "sort:\n"
+            "./main sort [file] [records] [size] [mode]\n"
+            "mode: lib -> using library functions, sys-> use system functions\n");
+        return 0;
+    }
     if(strcmp(args[1],"generate")==0){
         return generate(args[2], atoi(args[3]), atoi(args[4]));
     }
     if(strcmp(args[1],"copy")==0){
         start_real = clock();
         getrusage(RUSAGE_SELF, &usage_start);
-//--------------Czas jest mierzony
+
         out = copy(args[2], args[3], atoi(args[4]), atoi(args[5]), args[6]);
-//--------------Koniec mierzenia czasu
+
         getrusage(RUSAGE_SELF, &usage_end);
         end_real = clock();
     }
     if(strcmp(args[1],"sort")==0){
         start_real = clock();
         getrusage(RUSAGE_SELF, &usage_start);
-//--------------Czas jest mierzony
+
         out = sort(args[2], atoi(args[3]), atoi(args[4]), args[5]);
-//--------------Koniec mierzenia czasu
+
         getrusage(RUSAGE_SELF, &usage_end);
         end_real = clock();
     }
-//WYPISIWANIE CZASU
+
     double real = (double)(end_real-start_real)/CLOCKS_PER_SEC;
     double user = (usage_end.ru_utime.tv_sec-usage_start.ru_utime.tv_sec)+(double)(usage_end.ru_utime.tv_usec-usage_start.ru_utime.tv_usec)/1000000;
 
