@@ -1,0 +1,5 @@
+ls
+ls -l
+pwd
+pwd
+tar -cvzf test.tar.gz ./main.c
