@@ -13,6 +13,7 @@ void inf_loop(int i) {
       if(j==100000) j =0;
     }
     free(arr);
+
 }
 
 int main() {
