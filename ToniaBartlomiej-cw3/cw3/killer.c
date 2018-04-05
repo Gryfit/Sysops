@@ -1,27 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
-#define SIZE 10000000
-int Fibonnaci(long a, long b){
-	long c = a+b;
-	printf("%d %d %d ",a,b,c);
-	while(c){
-		a=b;
-		b=c;
-		c=b+a;
-		printf("%d ",c);
+#include <stdio.h>
+#include <time.h>
+
+
+void inf_loop(int i) {
+    int *arr ;
+	if(!(arr= malloc(1000000 * sizeof(int)))){
+	puts("failed to allocate memory\n");	
 	}
-	printf("\n");
-	return 0;
+    for (int j=0; j<1000000; j++) {
+	    arr[j]=j;
+      if(j==100000) j =0;
+    }
+    free(arr);
 }
-int Fibonnaci2(long * T){
-	T[0]=1;
-	T[1]=1;
-	for(int i=2;i<SIZE;i++){
-		T[i]=T[i-1]+T[i-2];
-	}
-	return 0;
-}
-int main(int arg, char*args[]) {
-	long* T = calloc(SIZE,sizeof(long));
-	return Fibonnaci2(T);
+
+int main() {
+    inf_loop(0);
 }

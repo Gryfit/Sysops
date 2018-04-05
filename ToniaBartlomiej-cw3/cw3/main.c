@@ -59,7 +59,7 @@ int interpreter(char* path, int timelimit, int sizelimit){
         	return -1;
 		}
 		if(pid==0){
-			if(setrlimit(RLIMIT_AS ,&slim)==-1 && setrlimit(RLIMIT_CPU,&tlim)==-1){
+			if(setrlimit(RLIMIT_AS ,&slim)==-1 || setrlimit(RLIMIT_CPU,&tlim)==-1){
 				perror("Limits not set.\n");
 				return -1;
 			}
@@ -85,4 +85,5 @@ int main(int arg, char*args[]) {
 	}
     return interpreter(args[1],atoi(args[2]),atoi(args[3]));
 }
+
 
