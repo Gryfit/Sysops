@@ -1,5 +1,3 @@
-ls
-ls -l
 pwd
+cd ..
 pwd
-tar -cvzf test.tar.gz ./main.c

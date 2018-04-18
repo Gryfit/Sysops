@@ -1,0 +1,2 @@
+cat /etc/passwd|sort|tail -n 2
+ls
