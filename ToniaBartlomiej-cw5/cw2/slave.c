@@ -35,5 +35,4 @@ int main(int argc, char** argv){
     }
     close(fifo);
     return EXIT_SUCCESS;
-
 }
