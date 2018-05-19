@@ -1,0 +1,132 @@
+Satrun 1
+Threads 1
+Picture size 640x480
+Filter size 25
+Time
+	Real 4.22s
+	User 4.21s
+	System 0.00s
+
+Threads 2
+Picture size 640x480
+Filter size 25
+Time
+	Real 2.16s
+	User 4.32s
+	System 0.00s
+
+Threads 4
+Picture size 640x480
+Filter size 25
+Time
+	Real 2.30s
+	User 9.15s
+	System 0.00s
+
+Threads 8
+Picture size 640x480
+Filter size 25
+Time
+	Real 1.34s
+	User 10.23s
+	System 0.00s
+
+Glassware 1
+Threads 1
+Picture size 320x428
+Filter size 25
+Time
+	Real 4.13s
+	User 4.12s
+	System 0.00s
+
+Threads 2
+Picture size 320x428
+Filter size 25
+Time
+	Real 2.07s
+	User 4.13s
+	System 0.00s
+
+Threads 4
+Picture size 320x428
+Filter size 25
+Time
+	Real 1.04s
+	User 4.13s
+	System 0.00s
+
+Threads 8
+Picture size 320x428
+Filter size 25
+Time
+	Real 0.59s
+	User 4.54s
+	System 0.00s
+
+Satrun 2
+Threads 1
+Picture size 640x480
+Filter size 50
+Time
+	Real 25.87s
+	User 25.80s
+	System 0.00s
+
+Threads 2
+Picture size 640x480
+Filter size 50
+Time
+	Real 15.03s
+	User 29.97s
+	System 0.00s
+
+Threads 4
+Picture size 640x480
+Filter size 50
+Time
+	Real 9.31s
+	User 37.01s
+	System 0.00s
+
+Threads 8
+Picture size 640x480
+Filter size 50
+Time
+	Real 5.31s
+	User 40.96s
+	System 0.01s
+
+Glassware 2
+Threads 1
+Picture size 320x428
+Filter size 50
+Time
+	Real 11.77s
+	User 11.58s
+	System 0.00s
+
+Threads 2
+Picture size 320x428
+Filter size 50
+Time
+	Real 8.63s
+	User 16.86s
+	System 0.01s
+
+Threads 4
+Picture size 320x428
+Filter size 50
+Time
+	Real 4.29s
+	User 16.83s
+	System 0.00s
+
+Threads 8
+Picture size 320x428
+Filter size 50
+Time
+	Real 2.46s
+	User 18.29s
+	System 0.01s
+

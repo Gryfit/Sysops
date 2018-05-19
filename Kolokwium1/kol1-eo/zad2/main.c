@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <signal.h>
 
-volatile int x =0;
+volatile int x =1;
 
 void f(){
     x =0;
